@@ -49,3 +49,11 @@ img,svg,video{max-width:100%;height:auto}
   .links{grid-template-columns:1fr;font-size:15px}
   .hero h1{font-size:34px}
 }
+
+
+/* v4 obvious homepage mobile fix: no stray wrapped button text */
+@media(max-width:700px){
+  .hero .buttons{display:flex;flex-direction:column;align-items:stretch;gap:12px;max-width:100%;}
+  .hero .btn{display:block;width:100%;max-width:100%;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hero .btn:first-child{white-space:normal;}
+}
